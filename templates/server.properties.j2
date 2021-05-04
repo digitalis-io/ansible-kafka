@@ -55,6 +55,13 @@ advertised.listeners={{ kafka_advertised_listener_protocol }}://{{ kafka_adverti
 # Maps listener names to security protocols, the default is for them to be the same. See the config documentation for more details
 #listener.security.protocol.map=PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
 
+security.inter.broker.protocol={{ kafka_inter_broker_listener_protocol }}
+sasl.mechanism.inter.broker.protocol={{ kafka_sasl_mechanism_inter_broker_protocol }}
+sasl.enabled.mechanisms={{ kafka_sasl_enabled_mechanisms }}
+allow.everyone.if.no.acl.found={{ kafka_allow_everyone_if_no_acl_found }}
+authorizer.class.name={{ kafka_authorizer_class_name }}
+super.users={{ kafka_super_users }}
+
 # The number of threads that the server uses for receiving requests from the network and sending responses to the network
 num.network.threads={{ kafka_num_network_threads }}
 
